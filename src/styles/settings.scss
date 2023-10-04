@@ -1,0 +1,10 @@
+@font-face {
+  font-family: 'Kanit';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Kanit Regular'), url(@/assets/fonts/kanit-regular.woff) format('woff');
+}
+
+[class*='text-'],[class^=swal2],body {
+  font-family: 'Kanit', sans-serif !important;
+}
