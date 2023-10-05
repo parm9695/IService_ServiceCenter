@@ -2,5 +2,55 @@
 ReqInfo = ข้อมูลผู้ยื่นคำขอ
 ReqDetail = รายละเอียดการยื่นคำขอ
 ReqDoc = หลักฐานประกอบคำขอ
-ReqChange = 
+ReqChange = รายการที่ขอเปลี่ยนแปลง
+
 -------------Variable--------------
+============บุคคลธรรมดา===============
+SelectPid = เลือกประเภทกรอกบัตรประชาชน
+pid = รหัสบัตรประชาชน
+wordBeforeName = คำนำหน้านาม
+namePersonal = ชื่อตัว
+nameMiddlePersonal = ชื่อกลาง
+nameLastPersonal = ชื่อสกุล
+birthDate = วัน/เดือน/ปีเกิด
+age = อายุ
+sex = เพศ
+nationality = สัญชาติ
+ethnicity = เชื้อชาติ
+religion = ศาสนา
+religionSelect = ศาสนา autocomplete
+career = อาชีพ
+careerSelect = อาชีพ autocomplete
+income = รายได้
+fatherName = ชื่อบิดา
+motherName = ชื่อมารดา
+houseCode = เลขรหัสประจำบ้าน
+houseNumber = บ้านเลขที่
+moo = หมู่ที่
+alley = ตรอก
+soi = ซอย
+street = ถนน
+province = จังหวัด
+district = อำเภอ/เขต
+subDistrict = แขวง/ตำบล
+registry = สำนักทะเบียน
+postCode = รหัสไปรษณีย์
+tel = เบอร์โทรศัพท์
+fax = เบอร์โทรสาร
+mobilePhone  = เบอร์โทรศัพท์เคลื่อนที่
+placeIssue = สภานที่ออกบัตร
+provinceIssue = จังหวัด
+districtIssue = อำเภอ/เขต
+attorney = ผู้รับมอบอำนาจ
+
+============ นิติบุคคล ===============
+reqType = บุคคลธรรมดา/นิติบุคคล
+addLegalEntity = เพิ่มนิติบุคคล
+legalType = ประเภทนิติบุคคล
+placeRegistration = สถานที่จดทะเบียน
+registrationNumber = เลขทะเบียน
+dateFounded = วัน/เดือน/ปี ที่ก่อตั้ง
+building = อาคาร
+floor = ชั้นที่
+villageName = ชื่อหมู่บ้าน
+email = อีเมล์

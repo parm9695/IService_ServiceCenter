@@ -22,16 +22,16 @@
           </v-col>
         </v-row>
       </div>
-      <v-tabs v-model="tab" grow>
+      <v-tabs v-model="tab" grow class="mb-5">
         <v-tab value="1">ข้อมูลผู้ยื่นคำขอ</v-tab>
         <v-tab value="2">รายละเอียดการยื่นคำขอ</v-tab>
         <v-tab value="3">หลักฐานประกอบคำขอ</v-tab>
-        <v-tab value="4">รายการที่ขอเปลี่ยนแปลง</v-tab>
+        <v-tab value="4" v-if="selection != 'ขอต่ออายุใบอนุญาต'">รายการที่ขอเปลี่ยนแปลง</v-tab>
       </v-tabs>
       <v-window v-model="tab">
         <v-window-item value="1">
-          {{ request.general }}
-          <General v-model="request.general" />
+          <!-- {{ request.general }} -->
+          <ReqInfo />
         </v-window-item>
         <v-window-item value="2"> tab-2 </v-window-item>
         <v-window-item value="3"> tab-3 </v-window-item>
@@ -47,14 +47,13 @@
 <script>
 import constructor from '@/store/constructor'
 import RequestSelection from '@/components/RequestSelection.vue'
-import General from './General.vue'
-
+import ReqInfo from './EntertainmentComponents/ReqInfo.vue'
 import print from '@/prints/gun-personal'
 
 export default {
   components: {
     RequestSelection,
-    General,
+    ReqInfo,
   },
 
   data() {
