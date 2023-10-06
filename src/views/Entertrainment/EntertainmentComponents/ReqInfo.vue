@@ -1,5 +1,5 @@
 <template>
-  <v-radio-group v-model="reqType" inline>
+  <v-radio-group v-model="reqType" inline class="mt-5">
     <v-radio label="บุคคลธรรมดา" value="บุคคลธรรมดา"></v-radio>
     <v-radio label="นิติบุคคล" value="นิติบุคคล"></v-radio>
   </v-radio-group>
