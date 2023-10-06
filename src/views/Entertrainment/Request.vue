@@ -30,9 +30,8 @@
       </v-tabs>
       <v-window v-model="tab">
         <v-window-item value="1">
-          <!-- {{ request.general }}
-          <General v-model="request.general" /> -->
-          tab-1
+          <!-- {{ request.general }} -->
+          <ReqInfo />
         </v-window-item>
         <v-window-item value="2">
            <ReqDetails/>
@@ -55,17 +54,16 @@
 <script>
 import constructor from '@/store/constructor'
 import RequestSelection from '@/components/RequestSelection.vue'
-import General from './General.vue'
+import ReqInfo from './EntertainmentComponents/ReqInfo.vue'
 import ReqDetails from './ReqDetails'
 import ReqDocument from './ReqDocument'
 import ReqChange from './ReqChange'
-
 import print from '@/prints/gun-personal'
 
 export default {
   components: {
     RequestSelection,
-    General,
+    ReqInfo,
     ReqDetails,
     ReqDocument,
     ReqChange,
