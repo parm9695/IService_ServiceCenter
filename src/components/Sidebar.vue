@@ -8,7 +8,7 @@
     >
       <div class="text-center justify-center">
         <div class="d-flex justify-center pt-10">
-          <v-img max-width="70" src="@/assets/images/logo.png" />
+          <v-img max-width="60" height="60" src="@/assets/images/Vector.svg" />
         </div>
         <div class="text-h5 pt-5">
           <h1>i-SERVICE</h1>
