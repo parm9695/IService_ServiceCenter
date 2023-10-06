@@ -36,6 +36,17 @@
           "
         />
       </v-col>
+      <v-col cols="12" sm="2" lg="1">
+        <v-btn
+          color="primary"
+          rounded
+          variant="outlined"
+          size="large"
+          @click="clickOk"
+        >
+          ค้นหา
+        </v-btn>
+      </v-col>
     </v-row>
     <!-- บุคคลธรรมดา แถว 1-->
     <!-- บุคคลธรรมดา แถว 2 -->
@@ -87,16 +98,18 @@
     <!-- บุคคลธรรมดา แถว 2 -->
     <!-- บุคคลธรรมดา แถว 3 -->
     <v-row class="align-center">
-      <v-col cols="12" sm="6" lg="3">
+      <v-col cols="12" sm="6" lg="3" align-self="center">
         <p v-if="birthDate">วัน/เดือน/ปีเกิด : {{ birthDate }}</p>
-        <DatePicker
+           <DatePicker
           label="วัน/เดือน/ปีเกิด"
           variant="outlined"
           v-model="birthDate"
           v-if="!birthDate"
+         
         />
+       
       </v-col>
-      <v-col cols="12" sm="4" lg="1" v-if="age">
+      <v-col cols="12" sm="4" lg="1" v-if="age" align-self="center">
         <p>อายุ : {{ age }}</p>
       </v-col>
       <v-col cols="12" sm="2" lg="2" v-if="age">
@@ -107,18 +120,16 @@
           v-model="value.age"
           label="อายุ"
           variant="outlined"
-          hide-details="auto"
           persistent-placeholder
         />
       </v-col>
-      <v-col cols="12" sm="2" lg="2">
+      <v-col cols="12" sm="2" lg="3">
         <p v-if="sex">เพศ : {{ sex }}</p>
         <v-autocomplete
           v-model="sex"
           label="เพศ"
           :items="sexType"
           variant="outlined"
-          hide-details="auto"
           persistent-placeholder
           v-if="!sex"
         />
@@ -455,9 +466,9 @@
       <v-col cols="12" sm="6" lg="3">
         <v-text-field
           v-model="value.pid"
-          label="เลขประจำตัวประชาชน"
+          label="เลขทะเบียนนิติบุคคล"
           variant="outlined"
-          v-mask="'####-######-#'"
+          v-mask="'####################'"
           hide-details="auto"
           persistent-placeholder
           @keyup.enter="onClick"
@@ -478,7 +489,7 @@
           persistent-placeholder
         />
       </v-col>
-      <v-col cols="12" sm="6" lg="3">
+      <v-col cols="12" sm="2" lg="1">
         <v-btn
           color="primary"
           rounded
@@ -489,7 +500,7 @@
           ค้นหา
         </v-btn>
       </v-col>
-      <v-col cols="12" sm="6" lg="3">
+      <v-col cols="12" sm="3" lg="3">
         <v-btn
           color="primary"
           rounded
