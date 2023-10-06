@@ -55,9 +55,9 @@
 import constructor from '@/store/constructor'
 import RequestSelection from '@/components/RequestSelection.vue'
 import ReqInfo from './EntertainmentComponents/ReqInfo.vue'
-import ReqDetails from './ReqDetails'
-import ReqDocument from './ReqDocument'
-import ReqChange from './ReqChange'
+import ReqDetails from './EntertainmentComponents/ReqDetails'
+import ReqDocument from './EntertainmentComponents/ReqDocument'
+import ReqChange from './EntertainmentComponents/ReqChange'
 import print from '@/prints/gun-personal'
 
 export default {
