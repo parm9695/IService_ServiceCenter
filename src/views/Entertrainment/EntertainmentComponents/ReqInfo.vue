@@ -36,17 +36,6 @@
           "
         />
       </v-col>
-      <v-col cols="12" sm="2" lg="1">
-        <v-btn
-          color="primary"
-          rounded
-          variant="outlined"
-          size="large"
-          @click="clickOk"
-        >
-          ค้นหา
-        </v-btn>
-      </v-col>
     </v-row>
     <!-- บุคคลธรรมดา แถว 1-->
     <!-- บุคคลธรรมดา แถว 2 -->
