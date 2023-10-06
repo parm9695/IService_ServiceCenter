@@ -2,7 +2,7 @@
   <nav>
     <v-navigation-drawer
       v-model="drawer"
-      image="@/assets/images/background.png"
+      image="@/assets/images/bg-entertain.png"
       :color="color"
       :width="width"
     >

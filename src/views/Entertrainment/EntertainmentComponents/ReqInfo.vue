@@ -26,7 +26,7 @@
           v-mask="'#-####-#####-##-#'"
           hide-details="auto"
           persistent-placeholder
-          @keyup.enter="onClick"
+          @keyup.enter="SearchOnClick"
           clearable
           append-inner-icon="mdi-magnify"
           @click:append-inner="SearchOnClick"
