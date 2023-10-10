@@ -2,7 +2,7 @@
   <v-container class="mx-2" fluid>
     <RequestSelection
       v-model="selection"
-      v-if="['/Service/Entertainment/request'].includes($route.path)"
+      v-if="['/personal/request'].includes($route.path)"
     />
 
     <div v-if="selection">
@@ -13,41 +13,54 @@
               label="วันที่ยื่นคำขอ"
               variant="outlined"
               v-model="date"
+              density="compact"
             />
           </v-col>
           <v-col cols="12" md="4">
-            <v-chip class="text-h6 mb-5" size="x-large" color="app-color">
-              เลขที่คำขอ : 1/2566
-            </v-chip>
+            <div class="text-h6 text-app-color mb-6">
+              <span>
+                เลขที่คำขอ :
+                <span class="font-weight-bold">1/2566</span>
+              </span>
+            </div>
           </v-col>
         </v-row>
       </div>
-
       <v-tabs v-model="tab" grow>
         <v-tab value="1">ข้อมูลผู้ยื่นคำขอ</v-tab>
-        <v-tab value="2">รายละเอียดการยื่นคำขอ</v-tab>
-        <v-tab value="3">รายการที่ขอเปลี่ยนแปลง</v-tab>
-        <v-tab value="4">หลักฐานประกอบคำขอ</v-tab>
+        <v-tab value="2">ข้อมูลที่อยู่</v-tab>
+        <v-tab value="3">เอกสารประกอบ</v-tab>
       </v-tabs>
       <v-window v-model="tab">
         <v-window-item value="1">
-          <!-- {{ request.dataReqInfo }} -->
-          <ReqInfo v-model="request.dataReqInfo"/>
+          {{ request.general }}
+          <General v-model="request.general" />
         </v-window-item>
-        <v-window-item value="2">
-           <ReqDetails/>
-        </v-window-item>
-        <v-window-item value="3">
-            <ReqChange/> 
-        </v-window-item>
-        <v-window-item value="4">
-           <ReqDocument/>
-        </v-window-item>
+        <v-window-item value="2"> tab-2 </v-window-item>
+        <v-window-item value="3"> tab-3 </v-window-item>
       </v-window>
     </div>
     <v-footer app color="white" class="pa-4">
       <v-spacer />
-      <v-btn color="blue" size="large" @click="printDoc"> Print </v-btn>
+      <v-btn
+        rounded
+        color="secondary"
+        size="large"
+        prepend-icon="mdi-printer-outline"
+        class="mx-1"
+        @click="printDoc"
+      >
+        พิมพ์
+      </v-btn>
+      <v-btn
+        rounded
+        color="primary"
+        size="large"
+        prepend-icon="mdi-content-save-outline"
+        class="mx-1"
+      >
+        บันทึก
+      </v-btn>
     </v-footer>
   </v-container>
 </template>
@@ -55,20 +68,14 @@
 <script>
 import constructor from '@/store/constructor'
 import RequestSelection from '@/components/RequestSelection.vue'
-import ReqInfo from './EntertainmentComponents/ReqInfo.vue'
-import ReqDetails from './EntertainmentComponents/ReqDetails'
-import ReqDocument from './EntertainmentComponents/ReqDocument'
-import ReqChange from './EntertainmentComponents/ReqChange'
+import General from './General.vue'
+
 import print from '@/prints/gun-personal'
 
 export default {
   components: {
     RequestSelection,
-    ReqInfo,
-    ReqDetails,
-    ReqDocument,
-    ReqChange,
-
+    General,
   },
 
   data() {
@@ -76,7 +83,7 @@ export default {
       date: null,
       tab: null,
       request: {
-        dataReqInfo: new constructor.personal.ReqInfo(),
+        general: new constructor.personal.General(),
       },
       selection: null,
     }
