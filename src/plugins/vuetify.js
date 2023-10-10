@@ -2,6 +2,7 @@ import '@mdi/font/css/materialdesignicons.css'
 import 'vuetify/styles'
 import { createVuetify } from 'vuetify'
 import { VDatePicker } from 'vuetify/labs/VDatePicker'
+import { VDataTable } from "vuetify/labs/VDataTable";
 import colors from 'vuetify/lib/util/colors'
 import * as Facade from 'vue-input-facade'
 
@@ -11,6 +12,7 @@ export default createVuetify({
   },
   components: {
     VDatePicker,
+    VDataTable,
   },
   icons: {
     iconfont: 'mdi', // default - only for display purposes

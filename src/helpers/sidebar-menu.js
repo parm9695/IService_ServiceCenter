@@ -1,10 +1,23 @@
 const Entertainment = [
   {
+    title: 'ตรวจสอบคำร้อง',
+    subTitle: `${process.env.APP_SYSTEM} - ตรวจสอบคำร้อง`,
+    icon: 'mdi-magnify',
+    link: '/Service/Entertainment/checkRequest',
+  },
+  {
     title: 'จัดทำคำขอ',
     subTitle: `${process.env.APP_SYSTEM} - จัดทำใบคำขอ`,
     icon: 'mdi-certificate',
     link: '/Service/Entertainment/request',
   },
+  {
+    title: 'TestRoute',
+    subTitle: `${process.env.APP_SYSTEM} - ทดสอบ Route`,
+    icon: 'mdi-certificate',
+    link: '/Service/Entertainment/testRoute',
+  },
+  
   // {
   //   title: 'แก้ไขคำขอ',
   //   subTitle: `${process.env.APP_SYSTEM} - แก้ไขใบคำขอ`,
