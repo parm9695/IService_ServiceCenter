@@ -43,7 +43,7 @@
             text
             rounded="xl"
             size="large"
-            color="app-color"
+            color="purple-darken-4"
             prepend-icon="mdi-arrow-left"
           >
             ย้อนกลับ

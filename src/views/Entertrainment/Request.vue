@@ -35,6 +35,8 @@
           <ReqInfo v-model="request.dataReqInfo"/>
         </v-window-item>
         <v-window-item value="2">
+          <!-- {{ dataDetails }} -->
+           <!-- <ReqDetails v-model="dataDetails"/> -->
            <ReqDetails/>
         </v-window-item>
         <v-window-item value="3">
@@ -79,6 +81,8 @@ export default {
         dataReqInfo: new constructor.personal.ReqInfo(),
       },
       selection: null,
+      // dataDetails: {}
+
     }
   },
 
